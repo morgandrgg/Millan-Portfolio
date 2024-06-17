@@ -38,7 +38,6 @@ export default function Form() {
       }
     );
 
-    // comment out the above toast.info and uncomment the below code to enable emailjs
 
     emailjs
       .send(
@@ -48,7 +47,7 @@ export default function Form() {
         {
           publicKey: process.env.NEXT_PUBLIC_PUBLIC_KEY,
           limitRate: {
-            throttle: 5000, // you can not send more then 1 email per 5 seconds
+            throttle: 5000, 
           },
         }
       )
