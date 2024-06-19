@@ -250,7 +250,6 @@ export const projectsData = [
   },
 ];
 
-
 export const BtnList = [
   { label: "Home", link: "/", icon: "home", newTab: false },
   { label: "About", link: "/about", icon: "about", newTab: false },
@@ -258,25 +257,25 @@ export const BtnList = [
   { label: "Contact", link: "/contact", icon: "contact", newTab: false },
   {
     label: "Figma",
-    link: "https://www.github.com/codebucks27",
+    link: "https://www.figma.com/files/team/1198140580282520836/recents-and-sharing/recently-viewed?fuid=1198140569727893980",
     icon: "figma",
     newTab: true,
   },
   {
     label: "LinkedIn",
-    link: "https://www.linkedin.com/in/codebucks",
+    link: "https://www.linkedin.com/in/millan-makokha-88a96a256/",
     icon: "linkedin",
     newTab: true,
   },
   {
     label: "X",
-    link: "https://www.x.com/code_bucks",
+    link: "https://x.com/MakokhaMillan",
     icon: "twitter",
     newTab: true,
   },
   {
     label: "Resume",
-    link: "/resume.pdf",
+    link: "/Millan_Resume.pdf",
     icon: "resume",
     newTab: true,
   },
