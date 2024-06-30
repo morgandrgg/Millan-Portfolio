@@ -32,43 +32,47 @@ export default function Form() {
     const toastId = toast.loading("Sending your message, please wait...");
 
     toast.info(
-      "Form submissions areCodeBucks demo-only here. Please checkout the final code repo to enable it. If you want to connect you can reach out to me via codebucks27@gmail.com.",
+      "Form submissions are Millans demo-only here. Please reach out to me on email via millanmkhoha@gmail.com.",
       {
         id: toastId,
       }
     );
 
+const sendEmail = (params) => {
+  const toastId = toast.loading("Sending your message, please wait...");
 
-    emailjs
-      .send(
-        process.env.NEXT_PUBLIC_SERVICE_ID,
-        process.env.NEXT_PUBLIC_TEMPLATE_ID,
-        params,
-        {
-          publicKey: process.env.NEXT_PUBLIC_PUBLIC_KEY,
-          limitRate: {
-            throttle: 5000, 
-          },
-        }
-      )
-      .then(
-        () => {
-          toast.success(
-            "I have received your message, I will get back to you soon!",
-            {
-              id: toastId,
-            }
-          );
+  emailjs
+    .send(
+      process.env.NEXT_PUBLIC_SERVICE_ID,
+      process.env.NEXT_PUBLIC_TEMPLATE_ID,
+      params,
+      {
+        publicKey: process.env.NEXT_PUBLIC_PUBLIC_KEY,
+        limitRate: {
+          throttle: 5000,
         },
-        (error) => {
-          toast.error(
-            "There was an error sending your message, please try again later!",
-            {
-              id: toastId,
-            }
-          );
+      }
+    )
+    .then((response) => {
+      console.log("EmailJS response:", response);
+      toast.success(
+        "I have received your message, I will get back to you soon!",
+        {
+          id: toastId,
         }
       );
+    })
+    .catch((error) => {
+      console.error("EmailJS Error:", error);
+      toast.error(
+        "There was an error sending your message, please try again later!",
+        {
+          id: toastId,
+        }
+      );
+    });
+};
+
   };
 
   const onSubmit = (data) => {
