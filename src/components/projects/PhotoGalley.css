@@ -94,3 +94,26 @@
 .modal-next-btn {
     right: 20px;
 }
+
+@media only screen and (max-width: 600px) {
+    .modal-close-btn {
+        top: 10px;
+        right: 10px;
+        font-size: 12px;
+        padding: 4px;
+    }
+
+    .modal-nav-btn {
+        font-size: 12px;
+        margin: auto 2%;
+        padding: 4px;
+    }
+
+    .modal-prev-btn {
+        left: 10px;
+    }
+
+    .modal-next-btn {
+        right: 10px;
+    }
+}
